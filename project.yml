@@ -1,0 +1,27 @@
+name: NaviApp
+options:
+  bundleIdPrefix: com.example
+  deploymentTarget:
+    iOS: "15.0"
+
+targets:
+  NaviApp:
+    type: application
+    platform: iOS
+    sources:
+      - NaviApp
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.naviapp
+        CODE_SIGNING_ALLOWED: NO
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: NaviApp
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_NSLocationWhenInUseUsageDescription: "ナビゲーションのため現在地を使用します"
+        SWIFT_VERSION: "5.0"
+
+schemes:
+  NaviApp:
+    build:
+      targets:
+        NaviApp: all
